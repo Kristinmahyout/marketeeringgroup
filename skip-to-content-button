@@ -1,0 +1,37 @@
+CSS: 
+/*Skip to Content*/
+    .skip-link {
+        position: fixed;
+        top: -100px;
+        left: -100px;
+        height: 1px;
+        width: 1px;
+        text-align: left;
+    }
+    
+    a.skip-link:active, 
+    a.skip-link:focus, 
+    a.skip-link:hover {
+        left: 15px !important;
+        top: 15px !important;
+        width: auto; 
+        height: auto; 
+		padding:10px 20px;
+		background:#333333;
+		color: #ffffff;
+		z-index: 10000001 !important;
+    }
+    /*Keyboard Focus States */
+a:focus,
+button:focus,
+input:focus,
+a:hover{
+    outline: outset 2px #f65335;
+	border-radius: 20px;
+}
+    
+Put this under Page Wrapper:
+  <a class="skip-link" href="#main" >Skip to content</a>
+  
+Put under nav where main body starts: 
+  <div id="main" class="content_body">
